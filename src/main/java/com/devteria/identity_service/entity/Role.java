@@ -1,11 +1,11 @@
 package com.devteria.identity_service.entity;
 
+import java.util.Set;
+
 import jakarta.persistence.*;
+
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.time.LocalDate;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -17,9 +17,9 @@ import java.util.Set;
 public class Role {
     @Id
     String name;
+
     String description;
 
     @ManyToMany
     Set<Permission> permissions;
-
 }
