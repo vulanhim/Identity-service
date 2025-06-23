@@ -61,7 +61,7 @@ public class AuthenticationService {
         var token = request.getToken();
         boolean isValid = true;
 
-        //spotless:off
+        // spotless:off
         try {
             verifyToken(token, false);
         } catch (AppException e) {
