@@ -3,8 +3,6 @@ package com.devteria.identity_service.service;
 import java.util.HashSet;
 import java.util.List;
 
-import com.devteria.identity_service.constant.PredefinedRole;
-import com.devteria.identity_service.entity.Role;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -12,9 +10,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.devteria.identity_service.constant.PredefinedRole;
 import com.devteria.identity_service.dto.request.UserCreationRequest;
 import com.devteria.identity_service.dto.request.UserUpdateRequest;
 import com.devteria.identity_service.dto.response.UserResponse;
+import com.devteria.identity_service.entity.Role;
 import com.devteria.identity_service.entity.User;
 import com.devteria.identity_service.exception.AppException;
 import com.devteria.identity_service.exception.ErrorCode;
